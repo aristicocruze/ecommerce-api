@@ -1,7 +1,15 @@
 const express = require("express");
 const app = express();
-const PORT = 5000;
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
-app.listen(PORT, () => {
-  console.log(`Backend running port ${PORT}`);
+dotenv.config();
+
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => console.log("DB connection successfull"))
+  .catch(err => console.log(err));
+
+app.listen(process.env.PORT, () => {
+  console.log(`Backend running port`);
 });
