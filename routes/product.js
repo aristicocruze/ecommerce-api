@@ -44,29 +44,25 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-//   //GET USER
-//   router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
-//     try {
-//       const user = await User.findById(req.params.id);
-//       const { password, ...others } = user._doc;
-//       res.status(200).json(others);
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
+//GET PRODUCT
+router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    res.status(200).json(product);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-//   //GET ALL USERS
-//   router.get("/", verifyTokenAndAdmin, async (req, res) => {
-//     try {
-//       const users = await User.find();
-
-//       const { password, ...others } = users;
-
-//       res.status(200).json(others);
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
+//GET ALL PRODUCTS
+router.get("/", verifyTokenAndAdmin, async (req, res) => {
+  try {
+    const product = await Product.find();
+    res.status(200).json(product);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //   //GET USERS STATS
 //   router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
