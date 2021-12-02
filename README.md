@@ -43,22 +43,22 @@ BODY raw
 }
 
 
-#GET - user by id
+# GET - user by id
 localhost:5000/api/users/find/619b638ef56b82fcd6052840
 
 Add the user id and a valid JWT in the Header.
 
-#GET - get all users
+# GET - get all users
 localhost:5000/api/users/
 
 Add the user id and a valid JWT in the Header.
 
 
-#GET - users stats
+# GET - users stats
 localhost:5000/api/products/
 
 
-#PUT - update product
+# PUT - update product
 localhost:5000/api/products/619e04f6117b0f8a9070e52b
 
 
@@ -72,7 +72,7 @@ BODY raw
     "price": 15
 }
 
-#DEL - delete product
+# DEL - delete product
 localhost:5000/api/products/619e0b9f375d5459610b383a
 
 
