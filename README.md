@@ -78,13 +78,13 @@ localhost:5000/api/products/619e0b9f375d5459610b383a
 
 Add the product id and a valid JWT in the Header.
 
-#GET - product
+# GET - product
 localhost:5000/api/products/find/619e0b9b375d5459610b3838
 
 Add the product id and a valid JWT in the Header.
 
 
-#GET - all products
+# GET - all products
 localhost:5000/api/products?new=true
 
 returns newest products
